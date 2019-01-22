@@ -1,28 +1,42 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="container">
+      <div class="content">
+      <h1>Date Picker</h1>
+        
+      </div>
+      <div class="content">
+        {{ currentDate }}
+        <date-picker v-model="currentDate" />
+      </div>
+    </div>
+    <sil-footer></sil-footer>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import silFooter from "./components/footer.vue";
+import datePicker from "./components/date-picker.vue";
+// import Grid from "@sil/grid";
+// const Row = Grid.row;
+// const Column = Grid.column;
 
 export default {
   name: "app",
   components: {
-    HelloWorld
+    // Column,
+    // Row,
+    datePicker,
+    silFooter
+  },
+  data() {
+    return {
+      currentDate: 20190122
+    };
   }
 };
 </script>
 
 <style lang="scss">
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import "~@sil/base-style/src/scss/index.full";
 </style>
