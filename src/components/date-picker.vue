@@ -18,7 +18,7 @@
             class="material-icons"
             @click="setPreviousMonth()"
           >
-            chevron_left
+            prev
           </i>
           <div class="calendar__title">
             {{ monthYearFormatted }}
@@ -27,7 +27,7 @@
             class="material-icons"
             @click="setNextMonth()"
           >
-            chevron_right
+            next
           </i>
         </div>
         <div class="calendar__header-days">
@@ -347,7 +347,7 @@ export default {
 <style lang="scss">
 .calendar {
   --datepicker-accent: red;
-  --datepicker-background: blue;
+  --datepicker-background: white;
   --datepicker-body-color: black;
   --datepicker-header-color: white;
   position: relative;
